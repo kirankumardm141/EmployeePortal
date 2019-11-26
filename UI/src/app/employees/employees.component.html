@@ -1,0 +1,35 @@
+<div class="success" *ngIf='message'>{{message}}</div>
+
+<!-- <button class="success" (click)="ListofEmployees()">List of  Employees</button> -->
+
+<h2>Employees List</h2>
+<table>
+    <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Date of Birth</th>
+      <th>Department</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tr *ngFor ="let employee of employees">
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.dateOfBirth | date}}</td>
+      <td>{{employee.department}}</td>
+      <td><button class="success" [routerLink]="['/employees', employee.id]" (click)="updateEmployee(employee.id)">Update</button></td>
+      <td><button class="alert" (click)="deleteEmployee(employee.id)">Delete</button></td>
+    </tr>
+  </table>
+
+  <div class="row">
+      <button class="btn btn-success" (click)="addEmployee()">Add Employee</button>
+  </div>
+
+  
+  
+  

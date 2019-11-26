@@ -1,0 +1,30 @@
+<h1>Employee Details</h1>
+
+<div>
+
+    <fieldset class="form-group">
+        <label>FirstName</label>
+        <input type="text" [(ngModel)]="employee.firstName" class="form-control" name="firstName" required="required" size="35">
+        <label *ngIf="employee.firstName == null">FirstName is Mandatory</label>
+    </fieldset>
+    <fieldset class="form-group">
+        <label>LastName</label>
+    <input type="text" [(ngModel)]="employee.lastName" class="form-control" name="lastName" required="required">
+</fieldset>
+    <fieldset class="form-group">
+        <label>Gender</label>
+    <input type="text" [(ngModel)]="employee.gender" class="form-control" name="gender" required="required">
+</fieldset>
+    <fieldset class="form-group">
+        <label>Date of Birth</label>
+    <input type="date" [ngModel]="employee.dob | date:'yyyy-MM-dd'"     
+     (ngModelChange)="employee.dob=$event" class="form-control" name="dob" required="required">
+</fieldset>
+    <fieldset class="form-group">
+        <label>Department</label>
+    <input type="text"  [(ngModel)]="employee.department" class="form-control" name="department" required="required">
+</fieldset>
+<button class="btn btn-success" (click)="saveEmployee()">Save</button>
+
+
+</div>
