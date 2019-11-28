@@ -8,12 +8,14 @@ import { EmployeesComponent } from './employees/employees.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
