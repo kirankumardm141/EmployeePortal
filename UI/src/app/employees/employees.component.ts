@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeesDataService } from '../service/data/employees-data.service';
 import { Router } from '@angular/router';
-import {MatSortModule} from '@angular/material/sort';
+
 
 
 export class Employee{

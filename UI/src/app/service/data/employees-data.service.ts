@@ -29,7 +29,7 @@ export class EmployeesDataService {
   }
 
   updateEmployees(id,employees){
-    console.log(id,employees);
+    //console.log(id,employees);
     return this.http.put(`http://localhost:8080/jpa/users/Employees/${id}`,employees);
   }
 

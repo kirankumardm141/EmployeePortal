@@ -5,7 +5,7 @@
     <fieldset class="form-group">
         <label>FirstName</label>
         <input type="text" [(ngModel)]="employee.firstName" class="form-control" name="firstName" required="required" size="35">
-        <label *ngIf="employee.firstName == null">FirstName is Mandatory</label>
+        <label *ngIf="inValid" class="text-danger">FirstName is Mandatory</label>
     </fieldset>
     <fieldset class="form-group">
         <label>LastName</label>
@@ -25,6 +25,7 @@
     <input type="text"  [(ngModel)]="employee.department" class="form-control" name="department" required="required">
 </fieldset>
 <button class="btn btn-success" (click)="saveEmployee()">Save</button>
+<button class="btn btn-primary" (click)="cancel()">Cancel</button>
 
 
 </div>

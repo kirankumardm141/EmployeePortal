@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  username:String;
+  password:String;
+  inValid : boolean;
+
   constructor(
     private router:Router
   ) { }
@@ -16,7 +20,13 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    if(this.username==='kiran' && this.password==='dummy')
+    {
     this.router.navigate(['employees']);
+    }
+    else{
+      this.inValid =true;
+    }
   }
 
 }
